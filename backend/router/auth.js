@@ -63,6 +63,12 @@ router.post("/signin", async (req, resp) => {
       httpOnly:true
     })
 
+    const result= {
+      userLogin,token
+    }
+
+    resp.status(201).json({status:201,result})
+    
     if (!isMatch) {
       resp.status(400).json({ error: "invalid Credential" });
     } else {

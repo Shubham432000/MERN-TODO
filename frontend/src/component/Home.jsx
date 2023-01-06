@@ -5,12 +5,14 @@ const Home = () => {
   const [user, setUser] = useState({});
 
   const callHomePage = async () => {
+    let token = localStorage.getItem("usersdatatoken");
     try {
       const res = await fetch("/home", {
         method: "GET",
         headers: {
-          Accept: "application/json",
+          // Accept: "application/json",
           "Content-Type": "application/json",
+          "Authorization": token
         },
         credentials: "include",
       });
@@ -30,10 +32,12 @@ const Home = () => {
   useEffect(() => {
     callHomePage();
   }, []);
+  console.log(user);
   return (
     <>
       <h1>welcome home</h1>
       <h1>{user.name}</h1>
+     
     </>
   );
 };
