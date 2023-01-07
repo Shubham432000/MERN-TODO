@@ -8,13 +8,13 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // useEffect(() => {
-  //  let auth=  localStorage.getItem("usersdatatoken")
+  useEffect(() => {
+   let auth=  localStorage.getItem("usersdatatoken")
 
-  //   if(auth){
-  //     navigate("/")
-  //   }
-  // }, []);
+    if(auth){
+      navigate("/")
+    }
+  }, []);
   const loginData = async (e) => {
     e.preventDefault();
 
