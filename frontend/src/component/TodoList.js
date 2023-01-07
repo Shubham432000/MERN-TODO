@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
-import { FaTrashAlt } from "react-icons/fa";
-import { HiPencilAlt } from "react-icons/hi";
+
 
 const TodoList = () => {
   const [getTodo, setGetTodo] = useState([]);
@@ -49,7 +48,31 @@ const TodoList = () => {
   
   return (
     <>
-      <div className="ml-[250px] mt-[100px]">
+
+<div className="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
+            <div className="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+             
+              <div>
+              {getTodo.map((item,index) => (
+                <div key={index} className="flex mb-4 items-center">
+                  <p className="w-full text-grey-darkest">
+                  {item.data}
+                  </p>
+                  <button onClick={() => editTodo(item)} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded  text-green border-green hover:bg-green">
+                    Edit
+                  </button>
+                  <button onClick={() => deletTodo(item._id)} className="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red  hover:bg-red">
+                    Remove
+                  </button>
+                </div>
+               ))}
+              </div>
+            </div>
+          </div>
+
+
+
+      {/* <div className="ml-[250px] mt-[100px]">
         <table className="table-fixed border-collapse border border-slate-400">
           <thead>
             <tr>
@@ -76,7 +99,7 @@ const TodoList = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      </div> */}
     </>
   );
 };
