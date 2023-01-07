@@ -58,10 +58,10 @@ const TodoList = () => {
                   <p className="w-full text-grey-darkest">
                   {item.data}
                   </p>
-                  <button onClick={() => editTodo(item)} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded  text-green border-green hover:bg-green">
+                  <button onClick={() => editTodo(item)} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded   border-green bg-green-500 text-white hover:bg-white hover:text-green-500">
                     Edit
                   </button>
-                  <button onClick={() => deletTodo(item._id)} className="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red  hover:bg-red">
+                  <button onClick={() => deletTodo(item._id)} className="flex-no-shrink p-2 ml-2 border-2 rounded  border-red  bg-red-600 text-white hover:bg-white hover:text-red-600">
                     Remove
                   </button>
                 </div>

@@ -42,7 +42,7 @@ const TodoForm = () => {
                     onChange={(e) => setTodo(e.target.value)}
                     required
                   />
-                  <button className="flex-no-shrink p-2 border-2 rounded text-teal border-teal  ">
+                  <button className="flex-no-shrink p-2 border-2 rounded bg-teal-400 text-white hover:bg-white hover:text-teal-400 ">
                     Add
                   </button>
                 </div>

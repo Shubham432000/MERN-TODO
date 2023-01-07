@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { ReactComponent as YourSvg } from "../image/Login.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -8,6 +8,13 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // useEffect(() => {
+  //  let auth=  localStorage.getItem("usersdatatoken")
+
+  //   if(auth){
+  //     navigate("/")
+  //   }
+  // }, []);
   const loginData = async (e) => {
     e.preventDefault();
 

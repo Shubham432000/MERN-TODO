@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { ReactComponent as YourSvg } from "../image/Avtar.svg";
 
 const Home = () => {
   const [user, setUser] = useState({});
@@ -35,9 +36,13 @@ const Home = () => {
   console.log(user);
   return (
     <>
-      <h1>welcome home</h1>
-      <h1>{user.name}</h1>
-     
+<div className="flex justify-center">
+  <YourSvg/>
+</div>
+    <div className="flex justify-center">
+      <h1>welcome {user.name}</h1>
+      
+     </div>
     </>
   );
 };
