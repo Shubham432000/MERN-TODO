@@ -7,6 +7,7 @@ import Navbar from './component/Navbar';
 import Home from "./component/Home"
 import TodoForm from './component/TodoForm';
 import PrivateComponent from './component/PrivateComponent';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
     
     
     </Routes>
+    <ToastContainer/>
     </>
   );
 }

@@ -5,6 +5,10 @@ const todoSchema = new mongoose.Schema({
     data:{
         type:String,
         required:true
+    },
+    time:{
+        type:String,
+        required:true
     }
 })
 

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { ReactComponent as YourSvg } from "../image/Signup.svg";
 import {  useNavigate } from "react-router-dom";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Signup = () => {
 
  
@@ -28,13 +31,22 @@ e.preventDefault()
          });
          const data = await res.json();
          if (res.status === 402 || !data) {
-         window.alert("invalid registeration");
+        // window.alert("invalid registeration");
+        toast.error('invalid registeration !', {
+          position: toast.POSITION.TOP_CENTER
+      });
            console.log("invalid registeration");
         }else if(password !== cpassword){
-          window.alert("password are not same");
+        //  window.alert("password are not same");
+        toast.error('password are not same !', {
+          position: toast.POSITION.TOP_CENTER
+      });
           console.log("password are not same");
         } else {
-          window.alert(" registeration succesfull");
+          // window.alert(" registeration succesfull");
+          toast.success('Success Notification !', {
+            position: toast.POSITION.TOP_CENTER
+        });
          console.log(" registeration succesfull");
     
            navigate("/login");

@@ -4,13 +4,13 @@ require("../db/database");
 const Todo = require("../model/todoSchema");
 
 router.post("/value", async (req, resp) => {
-  const { data } = req.body;
+  const { data,time } = req.body;
   try {
     if (!data) {
       return resp.status(422).json({ error: "please filled the value" });
     }
 
-    const Data = await Todo.create({ data });
+    const Data = await Todo.create({ data,time });
 
     resp.status(201).json({
       success: true,

@@ -1,6 +1,8 @@
 import React, { useState ,useEffect} from "react";
 import { ReactComponent as YourSvg } from "../image/Login.svg";
 import { useNavigate } from "react-router-dom";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -35,7 +37,10 @@ const Login = () => {
       window.alert("invalid crendiential")
     }else{
       localStorage.setItem("usersdatatoken",data.result.token);
-      window.alert("Login succesfully")
+      // window.alert("Login succesfully")
+      toast.success('Success Notification !', {
+        position: toast.POSITION.TOP_CENTER
+    });
       navigate("/home")
     }
   };

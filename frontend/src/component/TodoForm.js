@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import TodoList from "./TodoList";
+import moment from "moment"
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TodoForm = () => {
   const [todo, setTodo] = useState("");
 
+ // let date = moment().format();
+  let id = moment().format('D-MM-YYYY hh:mm:ss');
   const todoData = async (e) => {
     e.preventDefault();
 
@@ -14,6 +19,7 @@ const TodoForm = () => {
       },
       body: JSON.stringify({
         data: todo,
+        time:id
       }),
     });
     const data = res.json();
@@ -21,7 +27,10 @@ const TodoForm = () => {
     if (res.status === 400 || !data) {
       window.alert("invalid todo");
     } else {
-      window.alert("todo succesfully");
+     // window.alert("todo succesfully");
+      toast.success('TODO succesfully!', {
+        position: toast.POSITION.TOP_CENTER
+    });
     }
   };
 

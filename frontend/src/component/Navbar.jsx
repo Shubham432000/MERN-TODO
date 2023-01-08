@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link,useNavigate} from "react-router-dom"
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -7,6 +9,9 @@ const Navbar = () => {
 
   const logOut=()=>{
     localStorage.clear()
+    toast('Default Notification !', {
+      position: toast.POSITION.TOP_CENTER
+  });
     navigate("/")
   }
   return (
