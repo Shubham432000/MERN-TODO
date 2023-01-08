@@ -13,7 +13,7 @@ const Home = () => {
         headers: {
           // Accept: "application/json",
           "Content-Type": "application/json",
-          "Authorization": token
+          Authorization: token,
         },
         credentials: "include",
       });
@@ -36,13 +36,14 @@ const Home = () => {
   console.log(user);
   return (
     <>
-<div className="flex justify-center">
-  <YourSvg/>
-</div>
-    <div className="flex justify-center">
-      <h1>welcome {user.name}</h1>
-      
-     </div>
+    <div className="mt-[100px]">
+      <div className="flex justify-center">
+        <YourSvg />
+      </div>
+      <div className="flex justify-center">
+        <h1>welcome {user.name}</h1>
+      </div>
+      </div>
     </>
   );
 };

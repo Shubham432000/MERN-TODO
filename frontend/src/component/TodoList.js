@@ -52,7 +52,7 @@ const TodoList = () => {
           <div>
             {getTodo.map((item, index) => (
               <div key={index} className="flex mb-4 items-center">
-                <p className="w-full text-grey-darkest">{item.data}</p>
+                <p className="w-full text-grey-darkest text-xl">{item.data}</p>
                 <p>{item.time}</p>
                 <button
                   onClick={() => editTodo(item)}
