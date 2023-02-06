@@ -8,6 +8,7 @@ import Home from "./component/Home"
 import TodoForm from './component/TodoForm';
 import PrivateComponent from './component/PrivateComponent';
 import { ToastContainer } from 'react-toastify';
+import EditTodo from './component/EditTodo';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
     <Route exact path='/' element={<Signup/>}/>
   
     <Route path='/login' element={<Login/>}/>
+    <Route path='/edittodo/:id' element={<EditTodo/>}/>
     
     
     </Routes>

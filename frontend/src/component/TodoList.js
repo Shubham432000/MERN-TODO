@@ -19,18 +19,18 @@ const TodoList = () => {
     fetchUserData();
   }, [getTodo]);
 
-  const editTodo = async (item) => {
-    const data = prompt("Enter your new name");
+  // const editTodo = async (item) => {
+  //   const data = prompt("Enter your new name");
 
-    if (!data) {
-      alert("Please Enter Name ");
-    } else {
-      const resp = await axios.put(`/edittodo/${item._id}`, {
-        data: data,
-      });
-      console.log("edit", resp);
-    }
-  };
+  //   if (!data) {
+  //     alert("Please Enter Name ");
+  //   } else {
+  //     const resp = await axios.put(`/edittodo/${item._id}`, {
+  //       data: data,
+  //     });
+  //     console.log("edit", resp);
+  //   }
+  // };
 
   const deletTodo = async (item1) => {
     const resp = await axios.delete(`/delettodo/${item1}`);
@@ -54,12 +54,15 @@ const TodoList = () => {
               <div key={index} className="flex mb-4 items-center">
                 <p className="w-full text-grey-darkest text-xl">{item.data}</p>
                 <p>{item.time}</p>
-                <button
+                {/* <button
                   onClick={() => editTodo(item)}
                   className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded   border-green bg-green-500 text-white hover:bg-white hover:text-green-500"
                 >
                   Edit
-                </button>
+                </button> */}
+                <NavLink to={`/edittodo/${item._id}`} className="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded   border-green bg-green-500 text-white hover:bg-white hover:text-green-500">
+                  Edit
+                </NavLink>
                 <button
                   onClick={() => deletTodo(item._id)}
                   className="flex-no-shrink p-2 ml-2 border-2 rounded  border-red  bg-red-600 text-white hover:bg-white hover:text-red-600"
