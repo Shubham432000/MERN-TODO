@@ -31,7 +31,7 @@ const Navbar = () => {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span className="ml-2 text-xl text-white">TODO</span>
+            <span className="ml-3 text-xl text-white">TODO</span>
 
             <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
               <a className="mr-5 hover:bg-blue-700 text-white text-xl p-2 rounded-lg">
@@ -63,7 +63,7 @@ const Navbar = () => {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span className="ml-2 text-xl text-white">TODO</span>
+            <span className="ml-3 text-xl text-white">TODO</span>
 
             <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
               <a className="mr-5 hover:bg-blue-700 text-white text-xl p-2 rounded-lg">
