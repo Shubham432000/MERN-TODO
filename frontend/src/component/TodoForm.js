@@ -60,27 +60,7 @@ const TodoForm = () => {
             </div>
           </div>
 
-          {/* <div className="bg-slate-50 shadow-2xl shadow-slate-400 border border-indigo-600 w-[500px] h-[150px] ml-[350px] mt-[30px]">
-          <div className="flex flex-col justify-center ml-[50px]">
-            <div className="flex flex-row mt-[20px]">
-              <label htmlFor="" className="mt-[7px] ml-[30px]">
-                Todo
-              </label>
-              <br />
-              <input
-                type="text"
-                value={todo}
-                onChange={(e) => setTodo(e.target.value)}
-                required
-                className="w-[200px] h-[30px] ml-[5px] mt-[5px] border border-indigo-600 pl-2"
-              />
-            </div>
-          </div>
-        </div>
-
-        <button className="ml-[650px] mt-[20px] border border-indigo-600 px-2 py-1 text-white bg-indigo-600 hover:bg-white hover:text-indigo-600">
-          Submit
-        </button> */}
+          
         </form>
       </section>
       <TodoList />
