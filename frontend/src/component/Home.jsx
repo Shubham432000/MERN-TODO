@@ -36,7 +36,7 @@ const Home = () => {
   console.log(user);
   return (
     <>
-    <div className="mt-[100px]">
+    <div className="mt-[101px]">
       <div className="flex justify-center">
         <YourSvg />
       </div>
