@@ -48,7 +48,7 @@ const Login = () => {
   return (
     <>
      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24  flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-wrap items-center">
+        <div className="container px-4 py-22  flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-wrap items-center">
           <div className="svg-container  md:pr-1 lg:pr-0 pr-0 w-1/2 sm:w-1/2 md:w-1/2 xl:w-1/2 lg:w-1/2">
             <YourSvg />
           </div>
